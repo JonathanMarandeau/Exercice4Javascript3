@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <title>Exercice 4</title>
+    </head>
+    <body>
+      <form>
+        <label for="password">Votre mot de passe : </label><input type="text" name="password" value="" id="password" />
+        <label for="confirmation">Confirmez : </label><input type="text" name="confirmation" value="" id="confirmation" />
+        <!--On ajoute le onclick pour créer une fonction validation-->
+        <button type="button" name="button" onclick="validation()">Vérification</button>
+      </form>
+      <script>
+      //On crée la fonction validation
+        function validation(){
+          //la condition que password soit égale à confirmation pour avoir des bordures vertes
+          if (document.getElementById('password').value == document.getElementById('confirmation').value){
+             document.getElementById('password').style.border = '3px solid green';
+             document.getElementById('confirmation').style.border = '3px solid green';
+          }
+          //Sinon bordures rouges
+          else{
+            document.getElementById('password').style.border = '3px solid red';
+            document.getElementById('confirmation').style.border = '3px solid red';
+          }
+        }
+      </script>
+    </body>
+  </html>
